@@ -1,0 +1,137 @@
+<?php f::htmlStart(); ?>
+<?php
+$oBL_Evacuacion=new BL_Evacuacion();
+$table=$oBL_Evacuacion->listaMisEvcuaciones();
+?>
+<table class="classTablaUI">
+    <thead>
+        <tr>
+            <th>
+                CIP
+            </th>
+            <th>
+                Personal
+            </th>
+            <th>
+                Grado
+            </th>
+            <th>
+                Lugar Destino
+            </th>
+            <th>
+                Motivo
+            </th>
+            <th>
+                Estado
+            </th>
+            <th>
+                Eliminar
+            </th>
+            <th>
+                Ver
+            </th>
+        </tr>
+
+        <tr class="classPaddinMargin0">
+            <th class="classPaddinMargin0" style="width: 20%"></th>
+            <th class="classPaddinMargin0" style="width: 20%"></th>
+            <th class="classPaddinMargin0" style="width: 20%"></th>
+            <th class="classPaddinMargin0" style="width: 20%"></th>
+            <th class="classPaddinMargin0" style="width: 20%"></th>
+            <th class="classPaddinMargin0" style="width: 20%"></th>
+            <th class="classPaddinMargin0" style="width: 40px"><?php f::pixel(40); ?></th> 
+            <th class="classPaddinMargin0" style="width: 40px"><?php f::pixel(40); ?></th> 
+        </tr>
+    </thead>
+    <tbody>
+        <?php
+        $codEvacuacion=s::get('codEvacuacion');
+        foreach($table as $key=> $row)
+        {
+            if($row['codEvacuacion'] == $codEvacuacion)
+            {
+                $class='ui-state-highlight';
+            }
+            else
+            {
+                $class='';
+            }
+            /*
+              e.codEvacuacion
+              , e.fecha
+              , e.estado
+              , e.fechaInicio
+              , e.fechaFin
+              , e.motivo
+              , e.observaciones
+              , e.codPersonal
+              , e.codTipoEvacuacion
+              , e.codMedioEvacuacion
+              , e.codPersonalAcompaniante
+              , p.codCIP
+              , p.nombres
+              , p.grado
+              , p.apellidoPat
+              , p.apellidoMat
+              , pa.nombres AS nombresAcompaniante
+              , pa.apellidoPat AS apellidoPatAcompaniante
+              , pa.apellidoMat AS apellidoMatAcompaniante
+              , te.nombre AS motivo
+              , me.nombre AS medioEvacuacion
+              , u.nombre AS lugarOrigen
+              , ud.nombre AS lugarDestino
+             *  */
+            switch($row['estado'])
+            {
+                case 1:
+                    $row['estado']='Solicitado';
+                    break;
+                case 2:
+                    $row['estado']='Aprobado';
+                    break;
+                case 3:
+                    $row['estado']='Desaprobado';
+                    break;
+                default:
+                    break;
+            }
+            ?>
+            <tr html_p__codEvacuacion="<?php echo f::encode($row['codEvacuacion']) ?>" class="<?php echo $class; ?>">
+                <td>
+                    <?php echo $row['codCIP']; ?>
+                </td>
+                <td>
+                    <?php echo $row['nombres'].' '.$row['apellidoPat'].' '.$row['apellidoMat']; ?>
+                </td>
+                <td>
+                    <?php echo $row['grado']; ?>
+                </td>
+                <td>
+                    <?php echo $row['lugarDestino']; ?>
+                </td>
+                <td>
+                    <?php echo $row['motivo']; ?>
+                </td>
+                <td>
+                    <?php echo $row['estado']; ?>
+                </td>
+                <td style="text-align: center">
+                    <?php
+                    if($row['estado']=='Solicitado')
+                    {
+                        ?><button class="classButtonEliminar">Eliminar</button><?php
+                    }
+                    ?>
+                </td>
+                <td style="text-align: center">
+                    <button class="classButtonVer">Ver</button>
+                </td>
+            </tr>
+            <?php
+        }
+        ?>
+
+    </tbody>
+</table>
+<input type="hidden" id="html_p__credencialMisEvacuaciones" value="<?php echo f::encode(f::getCredencial()); ?>"/>
+<?php f::htmlStop(); ?>

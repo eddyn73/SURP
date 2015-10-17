@@ -1,0 +1,343 @@
+<?php //f::htmlStart(); ?>
+<?php
+$oBL_Evacuacion=new BL_Evacuacion();
+$form=$oBL_Evacuacion->getForm();     
+?> 
+
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+            <td align="left" valign="top">
+                <div class="ui-widget-content ui-corner-all ui-helper-clearfix classPadding5">
+                    Datos Generales
+                </div>
+                <div class="classHeight5"><?php f::pixel(323) ?></div>
+                <div class="ui-widget-content ui-corner-all ui-helper-clearfix classPadding5" style="min-height: 270px">
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                            <td align="right" valign="middle">
+                                Código CIP
+                            </td>
+                            <td align="center" valign="middle">:</td>
+                            <td align="left" valign="middle">
+                                <div class="ui-widget-content ui-corner-all  ui-state-disabled" 
+                                     style="padding:5px;outline:none;width:156px;margin: 0px;" 
+                                     ><?php echo $form[0]['codCIP'];?></div>
+                            </td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td align="center" valign="middle" style="width: 128px"><div class="classHeight5"></div></td>
+                            <td align="right" valign="middle" style="width: 10px"><?php f::pixel(10); ?></td>
+                            <td align="left" valign="middle" style="width: 156px"></td>
+                            <td align="right" valign="middle" style="width: 5px"><?php f::pixel(5); ?></td>
+                            <td align="left" valign="middle"><div class="classHeight5"></div></td>
+                        </tr>
+                        <tr>
+                            <td align="right" valign="middle">
+                                Nombre
+                            </td>
+                            <td align="center" valign="middle">:</td>
+                            <td align="left" valign="middle">
+                                <div class="ui-widget-content ui-corner-all  ui-state-disabled" 
+                                     style="padding:5px;outline:none;width:156px;margin: 0px;" 
+                                     ><?php echo $form[0]['nombres'];?> <?php echo $form[0]['apellidoPat'];?> <?php echo $form[0]['apellidoMat'];?></div>
+                            </td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><div class="classHeight5"></div></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td align="right" valign="middle">
+                                DNI
+                            </td>
+                            <td align="center" valign="middle">:</td>
+                            <td align="left" valign="middle">
+                                <div class="ui-widget-content ui-corner-all  ui-state-disabled" 
+                                     style="padding:5px;outline:none;width:156px;margin: 0px;" 
+                                     ><?php echo $form[0]['dni'];?></div>
+                            </td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><div class="classHeight5"></div></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td align="right" valign="middle">
+                                Edad
+                            </td>
+                            <td align="center" valign="middle">:</td>
+                            <td align="left" valign="middle">
+                                <div class="ui-widget-content ui-corner-all  ui-state-disabled" 
+                                     style="padding:5px;outline:none;width:156px;margin: 0px;" 
+                                     ><?php echo $form[0]['edad'];?></div>
+                            </td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><div class="classHeight5"></div></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td align="right" valign="middle">
+                                Lugar de Origen
+                            </td>
+                            <td align="center" valign="middle">:</td>
+                            <td align="left" valign="middle">
+                                <div class="ui-widget-content ui-corner-all  ui-state-disabled" 
+                                     style="padding:5px;outline:none;width:156px;margin: 0px;" 
+                                     ><?php echo $form[0]['lugarOrigen'];?></div>
+                            </td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><div class="classHeight5"></div></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td align="right" valign="middle">
+                                Tipo Sangre
+                            </td>
+                            <td align="center" valign="middle">:</td>
+                            <td align="left" valign="middle">
+                                <div class="ui-widget-content ui-corner-all  ui-state-disabled" 
+                                     style="padding:5px;outline:none;width:156px;margin: 0px;" 
+                                     ><?php echo $form[0]['tipoSangre'];?></div>
+                            </td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><div class="classHeight5"></div></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td align="right" valign="middle">
+                                Grado
+                            </td>
+                            <td align="center" valign="middle">:</td>
+                            <td align="left" valign="middle">
+                                <div class="ui-widget-content ui-corner-all  ui-state-disabled" 
+                                     style="padding:5px;outline:none;width:156px;margin: 0px;" 
+                                     ><?php echo $form[0]['grado'];?></div>
+                            </td>
+                            <td></td>
+                            <td></td>
+                        </tr> 
+
+                    </table>
+                </div>
+            </td>
+            <td align="center" valign="middle"><?php f::pixel(5); ?></td>
+            <td align="left" valign="top" style="width: 100%">
+                <div class="ui-widget-content ui-corner-all ui-helper-clearfix classPadding5">
+                    Datos Evacuación
+                </div>
+                <div class="classHeight5"></div>
+                <div class="ui-widget-content ui-corner-all ui-helper-clearfix classPadding5" style="min-height: 270px">
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0"> 
+                        <tr>
+                            <td align="right" 
+                                valign="middle"
+                                >
+                                Lugar Destino
+                            </td>
+                            <td align="center" valign="middle">:</td>
+                            <td align="left" valign="middle">
+                                <div class="ui-widget-content ui-corner-all  ui-state-disabled" 
+                                     style="padding:5px;outline:none;width:156px;margin: 0px;" 
+                                     ><?php echo $form[0]['lugarDestino'];?></div>
+                            </td>
+                            <td></td>
+                            <td align="left" valign="middle">
+                                <div class="classRestaCaracteres ui-state-disabled">
+                                    <label class="html_p__buscarDestino"></label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center" valign="middle" style="width: 180px"><div class="classHeight5"><?php f::pixel(180); ?></div></td>
+                            <td align="right" valign="middle" style="width: 10px"><?php f::pixel(10); ?></td>
+                            <td align="left" valign="middle"></td>
+                            <td align="right" valign="middle" style="width: 1px"><?php f::pixel(1); ?></td>
+                            <td align="left" valign="middle" style="width: 1px"><div class="classHeight5"></div></td>
+                        </tr>
+                        <tr>
+                            <td align="right" 
+                                valign="middle"
+                                >
+                                Motivo
+                            </td>
+                            <td align="center" valign="middle">:</td>
+                            <td align="left" valign="middle"> 
+                                <div class="ui-widget-content ui-corner-all  ui-state-disabled" 
+                                     style="padding:5px;outline:none;width:156px;margin: 0px;" 
+                                     ><?php echo $form[0]['motivo'];?></div>
+                            </td>
+                            <td></td>
+                            <td align="left" valign="middle">
+                                <div class="classRestaCaracteres ui-state-disabled">
+                                    <label class=""></label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><div class="classHeight5"></div></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td align="right" 
+                                valign="middle" 
+                                >
+                                Medio Evacuación
+                            </td>
+                            <td align="center" valign="middle">:</td>
+                            <td align="left" valign="middle">
+
+                                <div class="ui-widget-content ui-corner-all  ui-state-disabled" 
+                                     style="padding:5px;outline:none;width:156px;margin: 0px;" 
+                                     ><?php echo $form[0]['medioEvacuacion'];?></div>
+                            </td>
+                            <td></td>
+                            <td align="left" valign="middle">
+                                <div class="classRestaCaracteres ui-state-disabled">
+                                    <label class=""></label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><div class="classHeight5"></div></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td align="right" 
+                                valign="middle"
+                                >
+                                Personal Acompañante
+                            </td>
+                            <td align="center" valign="middle">:</td>
+                            <td align="left" valign="middle">
+                                <div class="ui-widget-content ui-corner-all  ui-state-disabled" 
+                                     style="padding:5px;outline:none;width:156px;margin: 0px;" 
+                                     ><?php echo $form[0]['nombresAcompaniante'];?> <?php echo $form[0]['apellidoPatAcompaniante'];?> <?php echo $form[0]['apellidoMatAcompaniante'];?></div>
+                            </td>
+                            <td></td>
+                            <td align="left" valign="middle">
+                                <div class="classRestaCaracteres ui-state-disabled">
+                                    <label class="html_p__buscarPersonalAcompaniante"></label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><div class="classHeight5"></div></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td align="right" 
+                                valign="middle" 
+                                >
+                                Fecha Inicio
+                            </td>
+                            <td align="center" valign="middle">:</td>
+                            <td align="left" valign="middle">
+                                <div class="ui-widget-content ui-corner-all  ui-state-disabled" 
+                                     style="padding:5px;outline:none;width:156px;margin: 0px;" 
+                                     ><?php echo $form[0]['fechaInicio'];?></div>
+                            </td>
+                            <td></td>
+                            <td align="left" valign="middle">
+                                <div class="classRestaCaracteres ui-state-disabled">
+                                    <label class="html_p__fechaInicio"></label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><div class="classHeight5"></div></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td align="right" 
+                                valign="middle" 
+                                >
+                                Fecha Fin
+                            </td>
+                            <td align="center" valign="middle">:</td>
+                            <td align="left" valign="middle">
+                                <div class="ui-widget-content ui-corner-all  ui-state-disabled" 
+                                     style="padding:5px;outline:none;width:156px;margin: 0px;" 
+                                     ><?php echo $form[0]['fechaFin'];?></div>
+                            </td>
+                            <td></td>
+                            <td align="left" valign="middle">
+                                <div class="classRestaCaracteres ui-state-disabled">
+                                    <label class="html_p__fechaFin"></label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><div class="classHeight5"></div></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td align="right" 
+                                valign="middle"
+                                >
+                                Observaciones
+                            </td>
+                            <td align="center" valign="middle">:</td>
+                            <td align="left" valign="middle">
+                                <div class="ui-widget-content ui-corner-all  ui-state-disabled" 
+                                     style="padding:5px;outline:none;width:156px;margin: 0px;" 
+                                     ><?php echo $form[0]['observaciones'];?></div>
+                            </td>
+                            <td></td>
+                            <td align="left" valign="middle">
+                                <div class="classRestaCaracteres ui-state-disabled">
+                                    <label class="html_p__observaciones"></label>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+<?php //f::htmlStop(); ?>
