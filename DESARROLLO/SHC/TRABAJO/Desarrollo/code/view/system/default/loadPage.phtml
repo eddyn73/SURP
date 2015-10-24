@@ -1,0 +1,59 @@
+<?php f::htmlStart(); ?><!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <?php
+        require_once('metadata.php');
+        require_once('script.php');
+        ?>
+        <?php
+        $ruta=dirname(__FILE__).DIRECTORY_SEPARATOR.'modulos'.DIRECTORY_SEPARATOR;
+        $ruta=str_replace(dirname($_SERVER['SCRIPT_FILENAME']), '', $ruta);
+        $ruta_temp=explode(DIRECTORY_SEPARATOR, $ruta);
+        if(count($ruta_temp) > 0)
+        {
+            if($ruta_temp[0] == '')
+            {
+                unset($ruta_temp[0]);
+            }
+            $ruta=implode(DIRECTORY_SEPARATOR, $ruta_temp);
+        }
+        ?>
+        <script src="js.php?<?php echo f::id('src'); ?>=<?php echo f::encode(c::get('templateSystem').'jquery.php'); ?>"></script>
+        <?php f::htmlStop(); ?><script type="text/javascript"><?php f::jsStart(); ?>
+            setTimeout(function()
+            {
+                if (typeof callFunction === "undefined")
+                {
+                    alert('Error: La página se volverá a cargar');
+                    document.location.reload(true);
+                }
+            }, 15000);
+<?php f::jsStop(); ?></script><?php f::htmlStart(); ?>
+    </head>
+    <body>
+        <?php
+        $c["load_logo"]=c::get('load_logo');
+        $c["load_progress"]=c::get('load_progress');
+
+        list($c["load_logo_W"], $c["load_logo_H"])=getimagesize($c["load_logo"]);
+        list($c["load_progress_W"], $c["load_progress_H"])=getimagesize($c["load_progress"]);
+
+        $largo=$c["load_logo_W"];
+        if($c["load_progress_W"] > $largo)
+        {
+            $largo=$c["load_progress_W"];
+        }
+        $alto=$c["load_logo_H"] + $c["load_progress_H"];
+        ?>
+        <div id="divLoadingPage" style="position:fixed;top:50%;left:50%;
+             width:<?php echo $largo; ?>px;
+             margin-left:-<?php echo round($largo / 2); ?>px;
+             margin-top:-<?php echo round($alto / 2); ?>px;
+             text-align:center;padding:0px;">
+            <div><img src="<?php echo f::getUrlApp().$c["load_logo"] ?>" border="0" style="background-color:#FFF"/></div>
+            <div><img src="<?php echo f::getUrlApp().$c["load_progress"] ?>" border="0" style="background-color:#FFF"/></div>
+        </div>
+    </body>
+</html>
+<?php
+f::htmlStop();

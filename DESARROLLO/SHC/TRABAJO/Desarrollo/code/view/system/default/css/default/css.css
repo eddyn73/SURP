@@ -1,0 +1,235 @@
+body
+{
+    margin:0px !important;
+    padding:0px !important; 
+    font-size: 14px;
+    font-family:"Trebuchet MS", sans-serif;
+    /*overflow: hidden;*/
+}
+ 
+.classBody
+{
+    
+}
+pre
+{
+    padding:0px;
+    margin:0px;
+}
+.text
+{
+    outline:none;
+    padding:3px 4px;
+}
+.classTablaUI
+{
+    font-size:12px;
+    font-weight:normal;
+    border-collapse: collapse; 
+    width: 100%;
+}
+.classTablaUI thead tr th
+{
+    border-width:1px;
+    border-style:solid; 
+    padding:5px;
+    text-align: left;
+}
+.classTablaUI tbody tr td
+{
+    border-width:1px;
+    border-style:solid; 
+    padding:5px;
+}
+
+.classTablaUI tfood
+{
+
+}
+
+.classTablaUIClean
+{
+    font-size: 12px;
+    font-weight: normal;
+    border-collapse: collapse;
+    width: 100%;
+}
+.classTablaUIClean thead tr th
+{
+    text-align: center;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #DEDEDE;
+    padding: 5px;
+}
+.classTablaUIClean tbody tr td 
+{
+    border-width: 1px;
+    border-style: solid;
+    border-color: #DEDEDE;
+    padding: 5px;
+}
+
+.classTextoVertical
+{
+    writing-mode:tb-rl;
+    -webkit-transform:rotate(-90deg);
+    -moz-transform:rotate(-90deg);
+    -o-transform: rotate(-90deg);
+     
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+     
+    white-space:nowrap;
+    display:block;
+    bottom:0;
+    width:20px;
+    height:20px; 
+}
+
+.classPaginadoFooter
+{
+    margin:0px;
+    padding:5px;
+    cursor:pointer;
+}
+.divLogin
+{
+    margin:0px;
+    padding:4px;
+    width:372px; /*384*/
+
+    position:fixed;
+    top:50%;
+    left:50%;
+    margin-left:-192px;
+    margin-top:-138px;/*277*/
+
+} 
+
+.classRestaCaracteres
+{
+    font-size:10px !important;
+    font-weight:normal !important;
+/*    color: #9DA298 !important;*/
+}
+
+.classPaddinMargin0
+{
+    margin:0px !important;
+    margin-top:0px !important;
+    margin-right:0px !important;
+    margin-bottom:0px !important;
+    margin-left:0px !important;
+    padding:0px !important;
+    padding-top:0px !important;
+    padding-right:0px !important;
+    padding-bottom:0px !important;
+    padding-left:0px !important;
+    border-width:0px !important;
+    border-top-width: 0px !important;
+    border-right-width: 0px !important;
+    border-bottom-width: 0px !important;
+    border-left-width: 0px !important;
+}
+
+.cssOutlineNone
+{
+    outline:none !important;
+}
+
+.classText
+{
+    outline: none;
+    width: 250px;
+    font-size: 12px;
+    padding: 5px;
+}
+textarea.classText
+{
+    width:250px;
+    height:50px;
+}
+select.classText
+{
+    width:262px;
+}	
+.mano
+{
+    cursor:pointer !important;
+}
+.izquierda
+{
+    float:left;
+}
+.derecha
+{
+    float:right;
+}
+.classHoverUnderline:hover
+{
+    text-decoration: underline;
+}
+.preloadCenter
+{
+    background-image:url('../../imagenes/loadingfield.gif');
+    background-repeat:no-repeat;
+    background-position:center center;
+}
+
+.classMasterMenu
+{
+    background-color: #468C00;
+    color: #FFFFFF;
+    display: none;
+    padding: 10px 0px;
+}
+
+.classMasterHeader 
+{
+    padding: 10px;
+    color: #000;
+    font-weight: bold;
+}
+
+.classMasterSubHeader	 
+{
+    height: 5px;
+    background-color: #468C00;
+} 
+.classMenuLateralSelected
+{
+	color:#4B4B4A;
+	background-color:#F9F9F9 !important;
+	font-weight:bold;
+}
+
+.classPadding5
+{
+    padding: 5px !important;
+}
+
+.classPadding10
+{
+    padding: 10px !important;
+}
+
+.classMargin5
+{
+    margin: 5px !important;
+}
+
+.classMargin10
+{
+    margin: 10px !important;
+}
+
+.classHeight10
+{
+    height: 10px !important;
+}
+
+.classHeight5
+{
+    height: 5px !important;
+}

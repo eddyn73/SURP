@@ -1,0 +1,8 @@
+<?php f::htmlStart(); ?>
+<div class="ui-widget-content ui-corner-all ui-helper-clearfix classPadding5">
+    Esta seguro de Eliminar
+    <div id="divMessageEvacuacion"></div>
+    <input type="hidden" id="html_p__credencialEvacuacion" value="<?php echo f::encode(f::getCredencial()); ?>"/>
+    <input type="hidden" id="html_p__codEvacuacion" value="<?php echo f::encode($form[0]['codEvacuacion']); ?>"/>
+</div>
+<?php f::htmlStop(); ?>

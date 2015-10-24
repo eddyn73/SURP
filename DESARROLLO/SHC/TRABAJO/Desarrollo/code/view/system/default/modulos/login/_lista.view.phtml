@@ -1,0 +1,155 @@
+<?php f::htmlStart(); ?>
+<div class="ui-widget-overlay ui-front"></div>
+<div id="divLogin" class="divLogin ui-widget-content ui-corner-all ui-front ui-helper-clearfix classPadding5">
+
+    <div class="ui-widget-header ui-corner-all classPadding5" style="font-size: 16px">
+        <strong>Login</strong>
+    </div>
+    
+    <div class="classHeight5"></div>
+    
+    <div class="ui-widget-content ui-corner-all ui-helper-clearfix classPadding5">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+                <td align="center" 
+                    valign="middle" 
+                    class="ui-widget ui-state-default ui-corner-all"
+                    style="padding:0px 5px;margin: 0px;">
+                    <span class="ui-icon ui-icon-person" style="padding: 0px; margin: 0px;"></span>
+                </td>
+                <td align="right" valign="middle">
+                    <?php f::pixel(5); ?>
+                </td>
+                <td align="left" valign="middle">
+                    <input type="text"  
+                           class="ui-widget-content ui-corner-all" 
+                           style="padding:5px;outline:none;width:140px;margin: 0px;" 
+                           id="html_p__usuario"
+                           />
+                </td>
+                <td align="right" valign="middle">
+                    <?php f::pixel(5); ?>
+                </td>
+                <td align="left" valign="middle" style="width: 100%">
+                    <div class="classRestaCaracteres ui-state-disabled">
+                        <label class="html_p__usuario"></label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td align="center" valign="middle"><?php f::pixel(1, 5); ?></td>
+                <td align="right" valign="middle"></td>
+                <td align="left" valign="middle"></td>
+                <td align="right" valign="middle"></td>
+                <td align="left" valign="middle"></td>
+            </tr>
+            <tr>
+                <td align="center" 
+                    valign="middle" 
+                    class="ui-widget ui-state-default ui-corner-all"
+                    style="padding:0px 5px;margin: 0px;">
+                    <span class="ui-icon ui-icon-key" style="padding: 0px; margin: 0px;"></span>
+                </td>
+                <td align="right" valign="middle">
+
+                </td>
+                <td align="left" valign="middle">
+                    <input type="password"  
+                           class="ui-widget-content ui-corner-all" 
+                           style="padding:5px;outline:none;width:140px;margin: 0px" 
+                           id="html_p__clave"
+                           />
+                </td>
+                <td align="right" valign="middle">
+
+                </td>
+                <td align="left" valign="middle">
+                    <div class="classRestaCaracteres ui-state-disabled">
+                        <label class="html_p__clave"></label>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    
+    <div class="classHeight5"></div>
+    
+    <div class="ui-widget-content ui-corner-all ui-helper-clearfix classPadding5"> 
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+                <td align="center" 
+                    valign="middle" 
+                    class="ui-widget ui-state-default ui-corner-all"
+                    style="padding:0px 5px;margin: 0px;">
+                    <span class="ui-icon ui-icon-bullet" style="padding: 0px; margin: 0px;"></span>
+                </td>
+                <td align="right" valign="middle">
+                    <?php f::pixel(5); ?>
+                </td>
+                <td align="left" valign="middle">
+                    <div
+                        class="ui-widget-content ui-corner-all" 
+                        style="padding:0px;outline:none;margin: 0px;width: 150px; height: 25px;"
+                        >
+                        <img class="ui-corner-all"
+                            style="padding:0px;outline:none;margin: 0px;width: 150px; height: 25px;"
+                            id="html_p__imagenCapcha" src="<?php f::getUrlApp() ?>captcha.php"/>
+                    </div>
+                </td>
+                <td align="right" valign="middle">
+                    <?php f::pixel(5); ?>
+                </td>
+                <td align="left" valign="middle" style="width: 100%">
+                    <div class="classRestaCaracteres ui-state-disabled">Código Capcha</div>
+                </td>
+            </tr>
+            <tr>
+                <td align="center" valign="middle"><?php f::pixel(1, 5); ?></td>
+                <td align="right" valign="middle"></td>
+                <td align="left" valign="middle"></td>
+                <td align="right" valign="middle"></td>
+                <td align="left" valign="middle"></td>
+            </tr>
+            <tr> 
+                <td align="center" 
+                    valign="middle" 
+                    class="ui-widget ui-state-default ui-corner-all"
+                    style="padding:0px 5px;margin: 0px;">
+                    <span class="ui-icon ui-icon-bullet" style="padding: 0px; margin: 0px;"></span>
+                </td>
+                <td align="right" valign="middle">
+                    <?php f::pixel(5); ?>
+                </td>
+                <td align="left" valign="middle">
+                    <input type="text"  
+                           class="ui-widget-content ui-corner-all" 
+                           style="padding:5px;outline:none;width:140px;margin: 0px" 
+                           id="html_p__captcha"
+                           />
+                </td>
+                <td align="right" valign="middle">
+                    <?php f::pixel(5); ?>
+                </td>
+                <td align="left" valign="middle">
+                    <div class="classRestaCaracteres ui-state-disabled">
+                        <label class="html_p__captcha"></label>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    
+    <div class="classHeight5"></div>
+    
+    <div class="ui-widget-content ui-corner-all ui-helper-clearfix classPadding5">
+        <div style="text-align: right">
+            <button class="buttonRefresh" style="margin: 0px;">Refresh</button> 
+            <button class="buttonAceptar" style="margin: 0px;">Aceptar</button>
+            <input type="hidden" id="html_p__credencial" value="<?php echo f::encode(f::getCredencial());?>"/>
+        </div>
+        
+        <div class="classMessageLogin"> 
+        </div>
+    </div>
+</div>
+<?php f::htmlStop(); ?>
