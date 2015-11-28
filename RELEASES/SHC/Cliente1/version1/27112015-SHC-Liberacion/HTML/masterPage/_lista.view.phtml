@@ -1,0 +1,77 @@
+<?php f::htmlStart(); ?>
+<div id="divMasterPage" class="ui-widget-content ui-corner-all classPadding5 classMargin5">
+    <table style="width: 100%" border="0" cellspacing="0" cellpadding="0">
+        <tr id="trMasterPageHeader">
+            <td align="left" valign="top" style="width: 200px;">
+                <div id="divMasterPageLeftHeader" class="ui-widget-header ui-corner-all classPadding5"> 
+                    <?php echo c::get('title'); ?> 
+                </div> 
+            </td>
+            <td align="left" valign="top" style="width: 5px"><?php f::pixel(5, 1); ?></td>
+            <td align="left" valign="top">
+                <div id="divMasterPageCenterHeader" class="ui-widget-header ui-corner-all classPadding5">
+                    &nbsp;
+                </div>
+            </td>
+            <td align="left" valign="top" style="width: 5px"><?php f::pixel(5, 1); ?></td>
+            <td align="left" valign="top" style="width: 200px;">
+                <div id="divMasterPageRightHeader" class="ui-widget-header ui-corner-all classPadding5">
+                    
+                    <table style="width: 100%" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                            <td align="left" valign="center">
+                                Notificaciones
+                            </td>
+                            <td align="right" valign="center" style="padding: 0px !important">
+                                <button id="buttonCerrarSesion">Cerrar Sesión</button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td align="left" valign="middle" colspan="5" style="height: 5px">
+                <?php f::pixel(1, 5); ?>
+            </td> 
+        </tr>
+        <tr id="trMasterPageBody">
+            <td align="left" valign="top">
+                <div id="divMasterPageLeft" class="ui-widget-content ui-corner-all classPadding5" style="min-height: 30px ; overflow: auto">
+                    <div id="divMasterPageLeftContent">
+                        <?php f::htmlStop(); ?><?php c::getViewSystem('modulos/modulo/_left.lista.php'); ?><?php f::htmlStart(); ?>
+                    </div>
+                </div>
+            </td>
+            <td align="left" valign="top"></td>
+            <td align="left" valign="top">
+                <div id="divMasterPageCenter" class="ui-widget-content ui-corner-all classPadding5" style="min-height: 30px; overflow: auto">
+                    <div id="divMasterPageCenterContent"> 
+                        Bienvenido, Seleccione una opción
+                    </div> 
+                </div>
+            </td>
+            <td align="left" valign="top"></td>
+            <td align="left" valign="top">
+                <div id="divMasterPageRight" class="ui-widget-content ui-corner-all classPadding5" style="min-height: 30px; overflow: auto">
+                    <div id="divMasterPageRightContent">
+                        
+                    </div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td align="left" valign="middle" colspan="5" style="height: 5px">
+                <?php f::pixel(1, 5); ?>
+            </td> 
+        </tr>
+        <tr id="trMasterPageFooter">
+            <td align="left" valign="middle" colspan="5">
+                <div class="ui-widget-content ui-corner-all classPadding5">
+                    <div style="text-align: right">Versión 1.0</div>
+                </div>
+            </td> 
+        </tr>
+    </table>
+</div>
+<?php f::htmlStop(); ?>
