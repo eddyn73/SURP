@@ -1,28 +1,24 @@
-ECHO OFF
-IF %1.==. GOTO No1
-IF %2.==. GOTO No2
+@echo off
+set /p proj="Ingrese acronimo del PROYECTO (PRJ):"
+set /p cli="Ingrese acronimo del CLIENTE (CLI):"
+set /p ver="Ingrese la version (VER):"
 
-REM * Crea arbol de directorios de liberacion **
-set Fecha=%Date:~0,2%%Date:~3,2%%Date:~6,4%
-set ruta=%2\%Fecha%-%1-Liberacion
-rem echo %ruta%
-MD %ruta%
-cd %ruta%
-MD Documentos
-MD PHP
-MD HTML
-MD JS
-MD Imagenes
-MD DBScripts
-ECHO ** LIBRERIA CREADA **
-DIR
-GOTO End1
+set fecha=%date:~-4%%date:~3,2%%date:~0,2%
+set folder=_%proj%_LIBERACION#01
+set folder_base= %proj%\%cli%\%ver%\%fecha%%folder%
 
-:No1
-  ECHO Debe ingresar las siglas del SISTEMA!
-GOTO End1
-:No2
-  ECHO Debe ingresar la ruta destino!
-GOTO End1
+mkdir %folder_base%
+mkdir %folder_base%\Documentos
+mkdir %folder_base%\PHP
+mkdir %folder_base%\HTML
+mkdir %folder_base%\Imagenes
+mkdir %folder_base%\JS
+mkdir %folder_base%\DBScripts
 
-:End1
+
+copy ..\Documentos\Formatos\formatoLiberacion.xlsx %folder_base%\%folder_base%.xlsx
+@echo %filename%
+goto :eof 
+
+:usage
+@echo Usage: %0 Proyecto
